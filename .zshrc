@@ -44,3 +44,5 @@ bindkey -M vicmd '^k' sesh-sessions
 bindkey -M viins '^k' sesh-sessions
 alias suspe="systemctl suspend"
 export PATH="/home/linux/.bun/bin:$PATH"
+
+export PATH=$PATH:/home/linux/.spicetify
