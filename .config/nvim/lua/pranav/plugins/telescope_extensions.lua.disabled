@@ -1,6 +1,7 @@
 return {
 	{
 		"AckslD/nvim-neoclip.lua",
+		event = "VeryLazy",
 		dependencies = {
 			-- you'll need at least one of these
 			-- {'nvim-telescope/telescope.nvim'},
@@ -12,24 +13,20 @@ return {
 	},
 	{
 		"nvim-telescope/telescope-fzf-native.nvim",
+		event = "VeryLazy",
 		build = "make",
 	},
-	{ "nvim-telescope/telescope-live-grep-args.nvim" },
+	{ "nvim-telescope/telescope-live-grep-args.nvim", event = "VeryLazy" },
 	{
 		"aaronhallaert/advanced-git-search.nvim",
+		event = "VeryLazy",
 		dependencies = {
 			"nvim-telescope/telescope.nvim",
 			"tpope/vim-fugitive",
 			"tpope/vim-rhubarb",
 		},
 	},
-	{
-		"exosyphon/telescope-color-picker.nvim",
-		config = function()
-			vim.keymap.set("n", "<leader>uC", "<cmd>Telescope colors<CR>", { desc = "Telescope Color Picker" })
-		end,
-	},
-	"nanotee/zoxide.vim",
-	"nvim-telescope/telescope-ui-select.nvim",
-	"debugloop/telescope-undo.nvim",
+	{ "nanotee/zoxide.vim", event = "VeryLazy" },
+	{ "nvim-telescope/telescope-ui-select.nvim", event = "VeryLazy" },
+	{ "debugloop/telescope-undo.nvim", event = "VeryLazy" },
 }

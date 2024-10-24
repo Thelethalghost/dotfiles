@@ -172,7 +172,7 @@
     "format-linked": "{ifname} (No IP) ",
     "format-disconnected": "Disconnected ⚠ ",
     "format-alt": "{ifname}: {ipaddr}/{cidr}",
-    "on-click": "../scripts/wifi.sh",
+    "on-click": "/usr/local/dotfiles/.config/scripts/wifi.sh",
   },
   "wireplumber": {
     "scroll-step": 5, // %, can be a float

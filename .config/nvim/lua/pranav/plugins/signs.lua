@@ -1,6 +1,7 @@
 return {
 	{
 		"lewis6991/gitsigns.nvim",
+		event = { "BufReadPre" },
 		config = function()
 			require("gitsigns").setup({
 				signs = {
@@ -56,5 +57,6 @@ return {
 	},
 	{
 		"nvim-tree/nvim-web-devicons",
+		lazy = true,
 	},
 }

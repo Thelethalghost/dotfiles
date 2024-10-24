@@ -7,7 +7,7 @@ return {
 	},
 	{
 		"williamboman/mason.nvim",
-		lazy = false,
+		lazy = true,
 		config = true,
 	},
 
