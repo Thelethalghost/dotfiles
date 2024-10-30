@@ -23,7 +23,6 @@ return {
 	},
 	{
 		"stevearc/dressing.nvim",
-		cmd = "Mason",
 		opts = {},
 	},
 }

@@ -1,0 +1,27 @@
+#!/bin/bash
+
+# Configuration
+wallpapers="$HOME/Pictures/Wallpapers"  # Change this to your wallpaper directory
+
+# Function to set a random wallpaper
+set_random_wallpaper() {
+  # Find a new random picture
+  wallpaper="$(find -L "$wallpapers" -maxdepth 1 -type f | shuf -n 1)"
+
+  # Check if a wallpaper was found
+  if [ -n "$wallpaper" ]; then
+    # Preload the wallpaper
+    hyprctl hyprpaper preload "$wallpaper"
+    
+    # Set the wallpaper using hyprctl
+    hyprctl hyprpaper wallpaper "eDP-1,$wallpaper"
+    
+    echo "Wallpaper changed to: $wallpaper"
+  else
+    echo "No wallpapers found in $wallpapers"
+  fi
+}
+
+# Call the function to change the wallpaper
+set_random_wallpaper
+
