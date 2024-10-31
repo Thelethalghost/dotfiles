@@ -30,3 +30,6 @@ disabled = false
 style = "bold blue"
 format = "[$hostname]($style)"
 
+[zig]
+symbol="⚡️"
+
