@@ -24,4 +24,23 @@ alias source-venv="source .venv/bin/activate"
 alias suspe="systemctl suspend"
 export PATH="$HOME/.config/scripts:$PATH"
 export PATH="$HOME/.spicetify:$PATH"
+export PATH="$HOME/go/bin:$PATH"
 alias vim="nvim"
+
+# pnpm
+export PNPM_HOME="/home/nyx/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+
+# bun completions
+[ -s "/home/nyx/.bun/_bun" ] && source "/home/nyx/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+export ENCORE_INSTALL="/home/nyx/.encore"
+export PATH="$ENCORE_INSTALL/bin:$PATH"
+
