@@ -26,6 +26,7 @@ export PATH="$HOME/.config/scripts:$PATH"
 export PATH="$HOME/.spicetify:$PATH"
 export PATH="$HOME/go/bin:$PATH"
 alias vim="nvim"
+alias vi="nvim"
 
 # pnpm
 export PNPM_HOME="/home/nyx/.local/share/pnpm"

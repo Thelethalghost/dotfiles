@@ -1,0 +1,10 @@
+# theme = CyberpunkScarletProtocol
+# theme = GruvboxDarkHard
+theme = rose-pine-moon
+gtk-tabs-location = hidden
+window-decoration = false
+background-opacity = 0.8
+minimum-contrast = 1.2
+background = black
+window-padding-y = 4
+window-padding-x = 4

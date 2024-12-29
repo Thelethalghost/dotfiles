@@ -32,6 +32,7 @@ format = "[$hostname]($style)"
 
 [aws]
 symbol = "  "
+disabled = true
 
 [buf]
 symbol = " "
