@@ -27,6 +27,7 @@ export PATH="$HOME/.spicetify:$PATH"
 export PATH="$HOME/go/bin:$PATH"
 alias vim="nvim"
 alias vi="nvim"
+alias ecr-login="aws ecr get-login-password --region ap-south-1 | docker login --username AWS --password-stdin 783764618939.dkr.ecr.ap-south-1.amazonaws.com"
 
 # pnpm
 export PNPM_HOME="/home/nyx/.local/share/pnpm"
@@ -45,3 +46,7 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 export ENCORE_INSTALL="/home/nyx/.encore"
 export PATH="$ENCORE_INSTALL/bin:$PATH"
 
+
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init - zsh)"
