@@ -1,10 +1,13 @@
 # theme = CyberpunkScarletProtocol
 # theme = GruvboxDarkHard
-theme = rose-pine-moon
+# theme = Dark Pastel
+theme = Nocturnal Winter
+# theme = Monokai Classic
 gtk-tabs-location = hidden
 window-decoration = false
-background-opacity = 0.7
-minimum-contrast = 1.2
+background-opacity = 0.76
 background = black
+# minimum-contrast = 3
 window-padding-y = 4
 window-padding-x = 4
+cursor-color = white

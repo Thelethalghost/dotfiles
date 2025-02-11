@@ -9,6 +9,9 @@ plug zap-zsh/supercharge
 plug zsh-users/zsh-syntax-highlighting
 plug devadathanmb/zap-robbyrussell
 plug Aloxaf/fzf-tab
+plug zap-zsh/vim
+
+bindkey -v
 
 # initialise completions with ZSH's compinit
 autoload -Uz compinit && compinit
