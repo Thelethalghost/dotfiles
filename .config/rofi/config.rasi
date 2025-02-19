@@ -3,3 +3,5 @@ configuration {
 }
 
 @import "wifi"
+
+@theme "~/.config/rofi/wifi.rasi"
