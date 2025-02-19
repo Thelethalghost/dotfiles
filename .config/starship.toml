@@ -30,7 +30,7 @@ disabled = false
 style = "bold blue"
 format = "[$hostname]($style)"
 
-[Dotnet]
+[dotnet]
 disabled = true
 
 [aws]
