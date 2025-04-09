@@ -12,6 +12,7 @@ plug Aloxaf/fzf-tab
 plug zap-zsh/vim
 
 bindkey -v
+bindkey '^[[Z' autosuggest-accept
 
 # initialise completions with ZSH's compinit
 autoload -Uz compinit && compinit
