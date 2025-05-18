@@ -64,3 +64,4 @@ export PATH="$ENCORE_INSTALL/bin:$PATH"
 export PATH="/home/nyx/.config/herd-lite/bin:$PATH"
 export PHP_INI_SCAN_DIR="/home/nyx/.config/herd-lite/bin:$PHP_INI_SCAN_DIR"
 export GH_EDITOR=nvim
+export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
