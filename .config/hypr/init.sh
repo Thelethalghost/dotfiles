@@ -8,6 +8,7 @@ wallpaper="$(find -L "$wallpapers" -maxdepth 1 -type f | shuf -n 1)"
 echo "ipc" = on > "$config"
 echo "preload = $wallpaper" >> "$config"
 while true; do
+  hyprctl hyprpaper preload "$wallpaper"
   sleep 60
   hyprctl hyprpaper wallpaper "eDP-1,$wallpaper"
   break
