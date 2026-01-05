@@ -2,7 +2,7 @@ return {
   "stevearc/oil.nvim",
   opts = {},
   dependencies = { "nvim-tree/nvim-web-devicons" },
-  lazy = false,
+  lazy = true,
   config = function()
     require("oil").setup({
       -- Oil will take over directory buffers (e.g. `vim .` or `:e src/`)

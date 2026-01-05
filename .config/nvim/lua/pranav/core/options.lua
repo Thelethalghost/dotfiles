@@ -40,3 +40,14 @@ opt.splitbelow = true -- split horizontal window to the bottom
 -- turn off swapfile
 opt.swapfile = false
 opt.undofile = true
+
+-- Dockerfile filetype detection
+vim.filetype.add({
+  filename = {
+    ["Dockerfile"] = "dockerfile",
+    ["dockerfile"] = "dockerfile",
+  },
+  pattern = {
+    ["Dockerfile.*"] = "dockerfile",
+  },
+})

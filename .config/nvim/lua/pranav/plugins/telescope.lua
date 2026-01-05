@@ -62,6 +62,7 @@ return {
 		keys = {
 			{ "<leader>ff", "<cmd>Telescope find_files<CR>", desc = "Find Files" },
 			{ "<leader>fb", "<cmd>Telescope buffers<CR>", desc = "Find Buffers" },
+      { "<leader>fg", "<cmd>Telescope live_grep<CR>", desc = "Find with Grep (ripgrep)" },
 			{ "<leader>fh", "<cmd>Telescope help_tags<CR>", desc = "Find Help Tags" },
 			{ "<leader>fw", "<cmd>Telescope grep_string<CR>", desc = "Find Word under Cursor" },
 			{ "<leader>gc", "<cmd>Telescope git_commits<CR>", desc = "Search Git Commits" },
