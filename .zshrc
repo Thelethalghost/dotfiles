@@ -57,6 +57,8 @@ alias cat="bat --color=always"
 alias top="btop"
 alias tf="terraform"
 alias ktl="kubectl"
+alias lzd="lazydocker"
+alias code="zeditor"
 
 # ============================================================================
 # ENVIRONMENT VARIABLES & PATH
@@ -107,10 +109,6 @@ sdk() {
     sdk "$@"
 }
 
-ueks() {
-  aws eks update-kubeconfig --region "ap-south-1" --name "$1"
-}
-
 eks() {
   local region="ap-south-1"
   local cluster="$1"
@@ -128,3 +126,17 @@ eks() {
     --region "$region" \
     --name "$cluster"
 }
+
+awsp() {
+  local profile
+  profile=$(aws configure list-profiles | fzf --prompt="AWS Profile > ")
+  if [ -n "$profile" ]; then
+    export AWS_PROFILE="$profile"
+    echo "✅ Switched to: $AWS_PROFILE"
+    aws sts get-caller-identity --query 'Arn' --output text
+  fi
+}
+
+export PATH=$PATH:/home/nyx/.spicetify
+export PATH="$HOME/.asdf/shims:$HOME/.asdf/bin:$PATH"
+export CLAUDE_CODE_EXECUTABLE="/home/nyx/.local/bin/claude" # Temp till i figure out a solution
