@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # populate-aws-sso-profiles.sh
 
-SSO_SESSION_NAME="my-sso"
+SSO_SESSION_NAME="cn"
 SSO_REGION="ap-south-1"
 DEFAULT_REGION="ap-south-1"
 OUTPUT_FORMAT="json"
