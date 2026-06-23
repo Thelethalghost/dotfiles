@@ -1,156 +1,107 @@
-# Get editor completions based on the config schema
-"$schema" = 'https://starship.rs/config-schema.json'
-command_timeout = 10000
-# Inserts a blank line between shell prompts
-add_newline = false
+format = """
+[╭](bold overlay1)$os$username\
+$directory\
+$git_branch\
+$git_status\
+$git_commit\
+$time\
+\n$character\
+$conda\
+$python\
+"""
 
-format = "$username[@](bold red)$hostname in $directory$all"
+# =============Visauls================
 
-# Replace the '❯' symbol in the prompt with '➜'
-[character] # The name of the module we are configuring is 'character'
-success_symbol = '[➜](bold green)' # The 'success_symbol' segment is being set to '➜' with the color 'bold green'
-error_symbol = '[➜](bold red)' # The 'error_symbol' segment is being set to '➜' with the color 'bold red'
+palette = 'cyberdream'
 
-[line_break]
-disabled = true
+[palettes.cyberdream]
+text      = '#c7cfff'
+overlay1  = '#242937'
+color_fg0 = '#c7cfff'
+color_bg0 = '#0a0e14'
+color_bg1 = '#0f1117'
+color_bg3 = '#242937'
+color_blue   = '#5ea1ff'
+color_aqua   = '#5ef1ff'
+color_green  = '#5eff6c'
+color_orange = '#ffb65e'
+color_red    = '#ff6e5e'
+color_yellow = '#f1ff5e'
+color_pink   = '#ff5ea0'
+red = '#ff6e5e'
 
-# Disable the package module, hiding it from the prompt completely
-[package]
-disabled = true
+# =============Modules================
 
 [username]
 show_always = true
-format = "[$user]($style)"
-style_root = "bold red"
-style_user = "bold yellow"
+style_user = "fg:text bold"
+style_root = "fg:red bold"
+format = '[ $user ]($style)'
 
-[hostname]
-ssh_only = false
+[os]
 disabled = false
-style = "bold blue"
-format = "[$hostname]($style)"
-
-[dotnet]
-disabled = true
-
-[aws]
-symbol = "  "
-disabled = true
-
-[buf]
-symbol = " "
-
-[c]
-symbol = " "
-
-[conda]
-symbol = " "
-
-[crystal]
-symbol = " "
-
-[dart]
-symbol = " "
-
-[directory]
-read_only = " 󰌾"
-
-[docker_context]
-symbol = " "
-
-[elixir]
-symbol = " "
-
-[elm]
-symbol = " "
-
-[fennel]
-symbol = " "
-
-[fossil_branch]
-symbol = " "
-
-[git_branch]
-symbol = " "
-
-[git_commit]
-tag_symbol = '  '
-
-[golang]
-symbol = " "
-
-[guix_shell]
-symbol = " "
-
-[haskell]
-symbol = " "
-
-[haxe]
-symbol = " "
-
-[hg_branch]
-symbol = " "
-
-[java]
-symbol = " "
-
-[julia]
-symbol = " "
-
-[kotlin]
-symbol = " "
-
-[lua]
-symbol = " "
-
-[memory_usage]
-symbol = "󰍛 "
-
-[meson]
-symbol = "󰔷 "
-
-[nim]
-symbol = "󰆥 "
-
-[nix_shell]
-symbol = " "
-
-[nodejs]
-symbol = " "
-
-[ocaml]
-symbol = " "
+style = "fg:color_pink bold"
+format = "([ $symbol ]($style))"
 
 [os.symbols]
-Arch = " "
+Windows = ""
+Ubuntu = ""
+Debian = ""
+Arch = ""
+Manjaro = ""
+Linux = ""
+Macos = ""
+Unknown = ""
 
-[perl]
-symbol = " "
+[directory]
+style = "fg:color_blue bold"
+format = '( in [ $path ]($style))'
+truncation_length = 3
+truncation_symbol = "…/"
 
-[php]
-symbol = " "
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music"     = " "
+"Pictures"  = " "
 
-[pijul_channel]
-symbol = " "
+[git_branch]
+style = "fg:color_yellow"
+disabled = false
+symbol = ""
+format = '( on [$symbol $branch]($style))'
+
+[git_status]
+disabled = false
+style = "fg:color_orange"
+format = ' <([$all_status]($style))>'
+
+[git_commit]
+disabled = false
+only_detached = false
+format = ' [ $hash](fg:color_pink)'
+commit_hash_length = 6
+tag_disabled = false
+
+[time]
+disabled = false
+time_format = "%R"
+style = "fg:color_aqua"
+format = '  [$time]($style)'
+
+[character]
+format = """
+[╰─$symbol](fg:overlay1) """
+success_symbol = '[](fg:text bold)'
+error_symbol   = '[](fg:red bold)'
+
+# =======Programs environments========
 
 [python]
-symbol = " "
+disabled = false
+symbol = ""
+format = '([$symbol $virtualenv](fg:color_yellow)) > '
 
-[rlang]
-symbol = "󰟔 "
-
-[ruby]
-symbol = " "
-
-[rust]
-symbol = "󱘗 "
-
-[scala]
-symbol = " "
-
-[swift]
-symbol = " "
-
-[zig]
-symbol = " "
-
+[conda]
+disabled = false
+format = '([$symbol $environment](fg:color_green)) > '
